@@ -1,0 +1,650 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta name="google" content="notranslate h" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.10.2/js/lib/beautify-html.js"></script>
+    <!-- import the webpage's stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/turretcss@5.2.1/dist/turretcss.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <meta name="translate" content="https://www.translatetheweb.com/?from=&to=da&dl=de&ref=trb&a=https://antilate.glitch.me/"/>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <section>
+          <h1>
+            what's trans, dog?
+          </h1>
+        </section>
+
+        <a href="https://www.translatetheweb.com/?from=&to=da&dl=de&ref=trb&a=https%3A%2F%2Fwww.gelsenkirchen.de%2Fde%2Fdefault.aspx" target="_top">Replace parent url!</a>
+
+        
+        <section>
+          <h2 id="colors">L: original | R: transmooked</h2>
+        </section>
+      </div>
+    </header>
+
+    <main class="background-white padding-vertical-xxl">
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple div test
+        </h3>
+        <section id="1" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+            This is a test
+            </div>
+          </pre>
+          <pre pos>
+            <div>
+            This is a test
+            </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple div test (2 layers with span)
+        </h3>
+        <section id="1d" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+              <div>
+                <span>layer2</span>
+                EMPTY
+                <div>
+                DIV
+                </div>
+                <p>
+                P
+                </p>
+              </div>
+            This is a test
+            </div>
+          </pre>
+          <pre pos>
+           <div>
+                <div>
+                  <span>layer2</span>
+                  EMPTY
+                  <div>
+                  DIV
+                  </div>
+                  <p>
+                  P
+                  </p>
+                </div>
+              This is a test
+              </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container notranslate">
+        <h3 class="notranslate">
+          Simple div test (.notranslate)
+        </h3>
+        <section id="2" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+            This is a test
+            </div>
+          </pre>
+          <pre pos>
+            <div>
+            This is a test
+            </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "code" test
+        </h3>
+        <section id="3" class="border padding-s border-radius">
+          <pre pre>
+            <code>
+              Cookie
+            </code>
+          </pre>
+          <pre pos>
+            <code>
+              Cookie
+            </code>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "marquee" test
+        </h3>
+        <section id="x" class="border padding-s border-radius">
+          <pre pre>
+            <marquee>Test</marquee>
+          </pre>
+          <pre pos>
+              <marquee>Test</marquee>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "custom html" test
+        </h3>
+        <section id="cc" class="border padding-s border-radius">
+          <pre pre>
+            <t-video>Cookie</t-video>
+          </pre>
+          <pre pos>
+            <t-video>Cookie</t-video>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple "span" test
+        </h3>
+        <section id="4" class="border padding-s border-radius">
+          <pre pre>
+            <span>
+              Pork
+            </span>
+          </pre>
+          <pre pos>
+            <span>
+              Pork
+            </span>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple Link test
+        </h3>
+        <section id="5" class="border padding-s border-radius">
+          <pre pre>
+            <a href="//example.com">
+              Click me :))
+            </a>
+          </pre>
+          <pre pos>
+            <a href="//example.com">
+              Click me :))
+            </a>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          Simple link in div
+        </h3>
+        <section id="5h" class="border padding-s border-radius">
+          <pre pre>
+            <div>
+              <a href="//example.com">
+                Click me :))
+              </a>
+            </div>
+          </pre>
+          <pre pos>
+            <div>
+              <a href="//example.com">
+                Click me :))
+              </a>
+            </div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          testlink
+        </h3>
+        <section id="6" class="border padding-s border-radius">
+          <pre pre>
+            <a class="panel1 cur" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
+          </pre>
+          <pre pos>
+           <a class="panel1 cur" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container notranslate">
+        <h3 class="notranslate">
+          testlink (notranslate)
+        </h3>
+        <section id="7" class="border padding-s border-radius">
+          <pre pre>
+            <div class="notranslate">
+                <a class="panel1 cur" href="#"
+                  ><span
+                    ><span class="nummer">1</span
+                    ><span class="titel">Testraße</span></span
+                  ></a
+                >
+            </div>
+          </pre>
+          <pre pos>
+            <div class="notranslate">
+                <a class="panel1 cur" href="#"
+                  ><span
+                    ><span class="nummer">1</span
+                    ><span class="titel">Testraße</span></span
+                  ></a
+                >
+            </div>
+               </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          testlink (notranslate in a)
+        </h3>
+        <section id="8" class="border padding-s border-radius">
+          <pre pre>
+            <a class="panel1 cur notranslate" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
+          </pre>
+          <pre pos>
+           <a class="panel1 cur" href="#"
+              ><span
+                ><span class="nummer">1</span
+                ><span class="titel">Testraße</span></span
+              ></a
+            >
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          testlink (article)
+        </h3>
+        <section id="8g" class="border padding-s border-radius">
+          <pre pre>
+             <li>
+              <a href="//example.com" title="open article">
+                <div>
+                  <p>05.12.2019</p>
+                  <h4>Erstmals Rückbaugebot erlassen: </h4>
+                  <p>Stadt ordnet den ...</p>
+                </div>
+                <span></span>
+              </a>
+			      </li>
+          </pre>
+          <pre pos>
+             <li>
+              <a href="//example.com" title="open article">
+                <div>
+                  <p>05.12.2019</p>
+                  <h4>Erstmals Rückbaugebot erlassen: </h4>
+                  <p>Stadt ordnet den ...</p>
+                </div>
+                <span></span>
+              </a>
+			      </li>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container">
+        <h3 class="notranslate">
+          testlink (article)
+        </h3>
+        <section id="8hg" class="border padding-s border-radius col">
+          <pre pre>
+ <div class="element aktuelles noindex" data-ctrl-geaktuelles="{}">
+	<h3 class="element zwischenueberschrift"><span>Aktuelles</span></h3>
+
+				<ul>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40973-doch-noch-restarbeiten-auf-der-horster-strasse" title="Diesen Artikel aufrufen">
+					<div>
+						<p>10.12.2019</p>
+						<h4>Doch noch Restarbeiten auf der Horster Straße: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40972-hans-sachs-haus-nominiert-als-schoenstes-rathaus" title="Diesen Artikel aufrufen">
+					<div>
+						<p>10.12.2019</p>
+						<h4>Hans-Sachs-Haus nominiert als „schönstes Rathaus“: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40963-gewerbeabteilung-ist-am-12-dezember-geschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Gewerbeabteilung ist am 12. Dezember geschlossen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40962-kurt-schumacher-strasse-in-fahrtrichtung-gelsenkirchen-einspurig" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Kurt-Schumacher-Straße in Fahrtrichtung [...]</h4>
+						<p style="display: none;">Fahrbahnübergänge der Brücke über die Autobahn 2 werden erneuert</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40961-umbau-der-horster-strasse-ist-nahezu-abgeschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Umbau der Horster Straße ist nahezu abgeschlossen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40944-intensivtaeter-wird-erneut-abgeschoben" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>Intensivtäter wird erneut abgeschoben: </h4>
+						<p>Nach Hinweis ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40943-100-balus-foerdern-grundschulkinder-mit-gemuetlichkeit-mit-ruhe-und-gemuetlichkeit" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>100 Balus fördern Grundschulkinder „mit [...]</h4>
+						<p style="display: none;">Gelsenkirchen ist Spitzenreiter!</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40937-verbesserungen-in-der-zulassungsstelle" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>Verbesserungen in der Zulassungsstelle: </h4>
+						<p>Servicepaket ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40932-12-dezember-abteilung-gewerbe-geschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>12. Dezember: Abteilung Gewerbe geschlossen: </h4>
+						<p>Referat ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40928-staedtische-kitas-erhalten-sunpass-zertifikat" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Städtische Kitas erhalten „SunPass-Zertifikat“: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40927-altersgerecht-und-barrierearm-umbauen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Altersgerecht und barrierearm umbauen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40926-erstmals-rueckbaugebot-erlassen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Erstmals Rückbaugebot erlassen: </h4>
+						<p>Stadt ordnet den ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			</ul>
+		
+	
+	
+
+	<div class="bttnzeile">
+		<a href="/de/_meta/aktuelles/artikel/bereich/13-" class="bttn">Alle Nachrichten </a>
+	</div>
+</div>
+          </pre>
+          <pre pos>
+             <div class="element aktuelles noindex" data-ctrl-geaktuelles="{}">
+	<h3 class="element zwischenueberschrift"><span>Aktuelles</span></h3>
+
+				<ul>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40973-doch-noch-restarbeiten-auf-der-horster-strasse" title="Diesen Artikel aufrufen">
+					<div>
+						<p>10.12.2019</p>
+						<h4>Doch noch Restarbeiten auf der Horster Straße: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40972-hans-sachs-haus-nominiert-als-schoenstes-rathaus" title="Diesen Artikel aufrufen">
+					<div>
+						<p>10.12.2019</p>
+						<h4>Hans-Sachs-Haus nominiert als „schönstes Rathaus“: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40963-gewerbeabteilung-ist-am-12-dezember-geschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Gewerbeabteilung ist am 12. Dezember geschlossen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40962-kurt-schumacher-strasse-in-fahrtrichtung-gelsenkirchen-einspurig" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Kurt-Schumacher-Straße in Fahrtrichtung [...]</h4>
+						<p style="display: none;">Fahrbahnübergänge der Brücke über die Autobahn 2 werden erneuert</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40961-umbau-der-horster-strasse-ist-nahezu-abgeschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>09.12.2019</p>
+						<h4>Umbau der Horster Straße ist nahezu abgeschlossen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40944-intensivtaeter-wird-erneut-abgeschoben" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>Intensivtäter wird erneut abgeschoben: </h4>
+						<p>Nach Hinweis ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40943-100-balus-foerdern-grundschulkinder-mit-gemuetlichkeit-mit-ruhe-und-gemuetlichkeit" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>100 Balus fördern Grundschulkinder „mit [...]</h4>
+						<p style="display: none;">Gelsenkirchen ist Spitzenreiter!</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40937-verbesserungen-in-der-zulassungsstelle" title="Diesen Artikel aufrufen">
+					<div>
+						<p>06.12.2019</p>
+						<h4>Verbesserungen in der Zulassungsstelle: </h4>
+						<p>Servicepaket ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40932-12-dezember-abteilung-gewerbe-geschlossen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>12. Dezember: Abteilung Gewerbe geschlossen: </h4>
+						<p>Referat ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40928-staedtische-kitas-erhalten-sunpass-zertifikat" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Städtische Kitas erhalten „SunPass-Zertifikat“: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40927-altersgerecht-und-barrierearm-umbauen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Altersgerecht und barrierearm umbauen: </h4>
+						<p> ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			<li>
+				<a href="/de/_meta/aktuelles/artikel/40926-erstmals-rueckbaugebot-erlassen" title="Diesen Artikel aufrufen">
+					<div>
+						<p>05.12.2019</p>
+						<h4>Erstmals Rückbaugebot erlassen: </h4>
+						<p>Stadt ordnet den ...</p>
+					</div>
+					<span></span>
+				</a>
+			</li>
+		
+			</ul>
+		
+	<div class="bttnzeile">
+		<a href="/de/_meta/aktuelles/artikel/bereich/13-" class="bttn">Alle Nachrichten </a>
+	</div>
+</div>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+    </main>
+  </body>
+  <script src="/client.js" defer></script>
+</html>
