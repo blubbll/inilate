@@ -9,10 +9,12 @@ pre {
 section,
 header {
   display: flex;
+  margin: auto;
 }
 .container {
   width: auto !important;
   margin-top: 15px;
+  text-align: center;
 }
 pre[pre] {
   background: whitesmoke;
@@ -23,18 +25,10 @@ pre[pos] {
   max-width: 100%;
 }
 
+.notranslate section{
+  background: silver;
+}
+
 section.col{
   flex-direction: column;
-}
-
-.container{
-      display: flex;
-}
-
-form.blur{
-  filter: blur(5px);
-}
-
-.swal2-popup{
-  width: 64vh!important;
 }
