@@ -59,8 +59,6 @@ fetch("./")
 
           const _new = `#${i}`;
 
-          console.log(_new);
-
           //fix pre code
           $(_new)
             .find("pre[pre]")
