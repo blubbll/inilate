@@ -15,19 +15,20 @@ if (location.href.startsWith("https://translate.google")) {
     bingUrl
   );
   */
-  location.href = bingUrl;
+  // location.href = bingUrl;
 }
 
-fetch("https://antilate.glitch.me/")
+fetch("./")
   .then(r => r.text())
   .then(t => {
     const original = $($.parseHTML(t));
 
-    console.log(location.href)
-  
-    if (location.href.startsWith("https://translate.google")
-       || location.href.startsWith("https://www.translatoruser-int.com")
-       ) {
+    console.log(location.href);
+
+    if (
+      location.href.startsWith("https://translate.google") ||
+      location.href.startsWith("https://www.translatoruser-int.com")
+    ) {
       $(original.find("section")).each((i, el) => {
         const curId = $(el).prop("id");
 
@@ -63,3 +64,22 @@ fetch("https://antilate.glitch.me/")
       $("pre[pos]").text("not translating 🙉");
     }
   });
+
+$("pre[comment]").each((i, el) => {
+  const h = $(el)
+    .find("h3")
+    .text();
+  $(el)
+    .find("h3")
+    .remove();
+  console.log($(el)
+        .text())
+  $(el).html(
+    `<h3>${h}</h3>` +
+      "<p>" +
+      $(el)
+        .text()
+        .trim() +
+      "</p>"
+  );
+});

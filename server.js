@@ -9,26 +9,12 @@ const cors = require("cors");
 // we've started you off with Express,
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
-var corsOptions = {
-  origin: function(origin, callback) {
-    if (origin) {
-      console.log(`Origin: ${origin}`);
-      if (
-        [
-          "https://translate.googleusercontent.com",
-          "https://www.translatoruser-int.com"
-        ].indexOf(origin)
-      ) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    } else callback(null, true);
-  }
-};
-
-app.options("*", cors());
-app.use(cors(corsOptions));
+app.use("*", (req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
+  next();
+});
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static("public"));

@@ -4,17 +4,41 @@ body {
 
 pre {
   flex: auto;
+  border: 2px solid black;
+  margin: 0;
+  border-radius: 0;
 }
 
 section,
 header {
   display: flex;
   margin: auto;
+  break-before: always;
 }
 .container {
   width: auto !important;
   margin-top: 15px;
   text-align: center;
+}
+pre[comment] {
+  background: #f7edba;
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
+}
+pre[comment] h3 {
+  background: #f2e18c;
+  color: #8a750f;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 25px;
+  line-height: 25.2px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-style: italic;
 }
 pre[pre] {
   background: whitesmoke;
@@ -25,10 +49,10 @@ pre[pos] {
   max-width: 100%;
 }
 
-.notranslate section{
+.notranslate section {
   background: silver;
 }
 
-section.col{
+section.col {
   flex-direction: column;
 }

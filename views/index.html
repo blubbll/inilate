@@ -30,25 +30,26 @@
       href="https://cdn.jsdelivr.net/npm/turretcss@5.2.1/dist/turretcss.min.css"
     />
 
+    <link rel="stylesheet" href="./comments.css" />
     <link rel="stylesheet" href="./style.css" />
 
-    <meta name="translate" content="https://www.translatetheweb.com/?from=&to=da&dl=de&ref=trb&a=https://antilate.glitch.me/"/>
-    
+    <meta
+      name="translate"
+      content="https://www.translatetheweb.com/?from=&to=da&dl=de&ref=trb&a=https://antilate.glitch.me/"
+    />
+
     <!-- import the webpage's client-side javascript file -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
-      <div class="container">
+      <div class="container notranslate">
         <section>
           <h1>
             what's trans, dog?
           </h1>
         </section>
 
-        <a href="https://www.translatetheweb.com/?from=&to=da&dl=de&ref=trb&a=https%3A%2F%2Fwww.gelsenkirchen.de%2Fde%2Fdefault.aspx" target="_top">Replace parent url!</a>
-
-        
         <section>
           <h2 id="colors">L: original | R: transmooked</h2>
         </section>
@@ -57,11 +58,12 @@
 
     <main class="background-white padding-vertical-xxl">
       <!---------------------------------->
-      <div class="container">
-        <h3 class="notranslate">
-          Simple div test
-        </h3>
-        <section id="1" class="border padding-s border-radius">
+      <div class="container ">
+        <pre comment class="notranslate">
+          <h3>Simple div test</h3>
+          Hier sehen wir, wie ein einfaches Div von Google mit Inhalt gefüllt wird.
+        </pre>
+        <section id="1">
           <pre pre>
             <div>
             This is a test
@@ -74,12 +76,16 @@
           </pre>
         </section>
       </div>
-      <!---------------------------------->
+
+      <hr />
+      <!----->
+      <br />
       <div class="container">
-        <h3 class="notranslate">
-          Simple div test (2 layers with span)
-        </h3>
-        <section id="1d" class="border padding-s border-radius">
+        <pre comment class="notranslate">
+          <h3>Simple div test (2 layers with span)</h3>
+            Hier sehen wir, was Google mit 2 gestapelten Divs macht.
+        </pre>
+        <section id="1d" class="">
           <pre pre>
             <div>
               <div>
@@ -117,7 +123,7 @@
         <h3 class="notranslate">
           Simple div test (.notranslate)
         </h3>
-        <section id="2" class="border padding-s border-radius">
+        <section id="2" class="">
           <pre pre>
             <div>
             This is a test
@@ -135,7 +141,25 @@
         <h3 class="notranslate">
           Simple "code" test
         </h3>
-        <section id="3" class="border padding-s border-radius">
+        <section id="3" class="">
+          <pre pre>
+            <code>
+              Cookie
+            </code>
+          </pre>
+          <pre pos>
+            <code>
+              Cookie
+            </code>
+          </pre>
+        </section>
+      </div>
+      <!---------------------------------->
+      <div class="container skiptranslate">
+        <h3 class="skiptranslate">
+          Simple "code" test (skiptranslate)
+        </h3>
+        <section id="3c" class="">
           <pre pre>
             <code>
               Cookie
@@ -153,7 +177,7 @@
         <h3 class="notranslate">
           Simple "marquee" test
         </h3>
-        <section id="x" class="border padding-s border-radius">
+        <section id="x" class="">
           <pre pre>
             <marquee>Test</marquee>
           </pre>
@@ -167,7 +191,7 @@
         <h3 class="notranslate">
           Simple "custom html" test
         </h3>
-        <section id="cc" class="border padding-s border-radius">
+        <section id="cc" class="">
           <pre pre>
             <t-video>Cookie</t-video>
           </pre>
@@ -181,7 +205,7 @@
         <h3 class="notranslate">
           Simple "span" test
         </h3>
-        <section id="4" class="border padding-s border-radius">
+        <section id="4" class="">
           <pre pre>
             <span>
               Pork
@@ -199,7 +223,7 @@
         <h3 class="notranslate">
           Simple Link test
         </h3>
-        <section id="5" class="border padding-s border-radius">
+        <section id="5" class="">
           <pre pre>
             <a href="//example.com">
               Click me :))
@@ -217,7 +241,7 @@
         <h3 class="notranslate">
           Simple link in div
         </h3>
-        <section id="5h" class="border padding-s border-radius">
+        <section id="5h" class="">
           <pre pre>
             <div>
               <a href="//example.com">
@@ -239,7 +263,7 @@
         <h3 class="notranslate">
           testlink
         </h3>
-        <section id="6" class="border padding-s border-radius">
+        <section id="6" class="">
           <pre pre>
             <a class="panel1 cur" href="#"
               ><span
@@ -263,7 +287,7 @@
         <h3 class="notranslate">
           testlink (notranslate)
         </h3>
-        <section id="7" class="border padding-s border-radius">
+        <section id="7" class="">
           <pre pre>
             <div class="notranslate">
                 <a class="panel1 cur" href="#"
@@ -291,7 +315,7 @@
         <h3 class="notranslate">
           testlink (notranslate in a)
         </h3>
-        <section id="8" class="border padding-s border-radius">
+        <section id="8" class="">
           <pre pre>
             <a class="panel1 cur notranslate" href="#"
               ><span
@@ -315,7 +339,7 @@
         <h3 class="notranslate">
           testlink (article)
         </h3>
-        <section id="8g" class="border padding-s border-radius">
+        <section id="8g" class="">
           <pre pre>
              <li>
               <a href="//example.com" title="open article">
@@ -347,7 +371,7 @@
         <h3 class="notranslate">
           testlink (article)
         </h3>
-        <section id="8hg" class="border padding-s border-radius col">
+        <section id="8hg" class=" col">
           <pre pre>
  <div class="element aktuelles noindex" data-ctrl-geaktuelles="{}">
 	<h3 class="element zwischenueberschrift"><span>Aktuelles</span></h3>
@@ -488,9 +512,6 @@
 		
 			</ul>
 		
-	
-	
-
 	<div class="bttnzeile">
 		<a href="/de/_meta/aktuelles/artikel/bereich/13-" class="bttn">Alle Nachrichten </a>
 	</div>
