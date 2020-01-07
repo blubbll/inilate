@@ -23,39 +23,53 @@ fetch("./")
   .then(t => {
     const original = $($.parseHTML(t));
 
-    console.log(location.href);
+    //console.log(location.href);
+
+    $("section").each((i, el) => {
+      $(el).attr("id", i);
+    });
 
     if (
       location.href.startsWith("https://translate.google") ||
       location.href.startsWith("https://www.translatoruser-int.com")
     ) {
-      $(original.find("section")).each((i, el) => {
-        const curId = $(el).prop("id");
+      $(original)
+        .find(".container>section")
+        .each((i, el) => {
+          if (
+            $(el)
+              .parent()
+              .parent()[0].tagName === "HEADER"
+          )
+            return;
+          const id = i;
 
-        if (curId) {
           const pre = $(el).find("[pre]");
           const pos = $(el).find("[pos]");
 
           const origHtml = $(el)
             .find("pre[pre]")
             .html();
-          const brokenHtml = $(`#${curId}`)
+          const brokenHtml = $(`#${i}`)
             .find("pre[pos]")
             .html();
 
           const brokenHtmlmod = beauty(brokenHtml ? brokenHtml : origHtml);
           const origHtmlmod = beauty(beauty(origHtml));
 
+          const _new = `#${i}`;
+
+          console.log(_new);
+
           //fix pre code
-          $(`#${curId}`)
+          $(_new)
             .find("pre[pre]")
             .text(origHtmlmod);
           //show pos code
-          $(`#${curId}`)
+          $(_new)
             .find("pre[pos]")
             .text(brokenHtmlmod);
-        }
-      });
+        });
     } else {
       $("pre[pre]").each((i, el) => {
         $(el).text(beauty($(el).html()));
@@ -72,8 +86,6 @@ $("pre[comment]").each((i, el) => {
   $(el)
     .find("h3")
     .remove();
-  console.log($(el)
-        .text())
   $(el).html(
     `<h3>${h}</h3>` +
       "<p>" +
