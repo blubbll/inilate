@@ -10,6 +10,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="content-language" content="en" />
+
     <title>Welcome to Glitch!</title>
     <meta name="description" content="A cool thing made with Glitch" />
     <link
@@ -18,19 +20,19 @@
       href="https://glitch.com/edit/favicon-app.ico"
       type="image/x-icon"
     />
-    <meta name="google" content="notranslate h" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script src="https://cdn.rawgit.com/beautify-web/js-beautify/v1.10.2/js/lib/beautify-html.js"></script>
+    <script src="./diff.js"></script>
+    <script src="./highlight.js"></script>
     <!-- import the webpage's stylesheet -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/turretcss@5.2.1/dist/turretcss.min.css"
     />
 
-    <link rel="stylesheet" href="./comments.css" />
     <link rel="stylesheet" href="./style.css" />
 
     <meta
@@ -58,7 +60,7 @@
 
     <main class="background-white padding-vertical-xxl">
       <!---------------------------------->
-      <div class="container ">
+      <div class="container">
         <pre comment class="notranslate">
           <h3>Simple div test</h3>
           Hier sehen wir, wie ein einfaches Div von Google mit Inhalt gefüllt wird.
@@ -72,13 +74,13 @@
           <pre pos></pre>
         </section>
       </div>
-
+      <!---->
       <hr />
-      <!----->
       <br />
+      <!---->
       <div class="container">
         <pre comment class="notranslate">
-          <h3>Simple div test (2 layers with span)</h3>
+          <h3>Simple div test (2 layers with spans)</h3>
             Hier sehen wir, was Google mit 2 gestapelten Divs macht.
         </pre>
         <section>
@@ -100,25 +102,156 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
-      <div class="container notranslate">
-        <h3 class="notranslate">
-          Simple div test (.notranslate)
-        </h3>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+            <h3>HTML Elements</h3>
+            Wie verhält sich Google bei normalen HTML-Elementen?
+          </pre>
         <section>
           <pre pre>
             <div>
+              <!-- oh god what have i done -->
+              <span class="klass"
+                placeholder="please translate me"
+                alt="please translate me" 
+                aria-label="please translate me"
+                title="please translate me">
+                please translate me
+              </span>
+              <!-- another try -->
+              <span class="klass"
+                placeholder="please translate me">
+                please translate me
+              </span>
+              <!-- finally -->
+              <span class="klass">
+                please translate me
+              </span>
+            </div>
+          </pre>
+          <pre pos></pre>
+        </section>
+      </div>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+            <h3>HTML-Attributes</h3>
+            Welche HTML-Attribute übersetzt Google? Hint: Leider nur den Title :P
+            Und es rastet auch komplett aus...
+          </pre
+        >
+        <section>
+          <pre pre>
+            <div>
+              <!-- oh god what have i done -->
+              <span class="class"
+                placeholder="please translate me"
+                alt="please translate me" 
+                aria-label="please translate me"
+                title="please translate me">
+                please translate me
+              </span>
+              <!-- another try -->
+              <span class="class"
+                placeholder="please translate me">
+                please translate me
+              </span>
+              <!-- finally -->
+              <span class="class">
+                please translate me
+              </span>
+            </div>
+          </pre>
+          <pre pos></pre>
+        </section>
+      </div>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+            <h3>.notranslate & .skiptranslate</h3>
+            Einfache Klasse, um den Inhalt im Unterelement nicht zu übersetzen.
+            Skiptranslate ist jedoch nur eine Klasse des gtes und bringt hier nichts.
+          </pre>
+        <section>
+          <pre pre>
+            <div class="notranslate">
+            This is a test
+            </div>
+          </pre>
+          <pre pos></pre>
+        </section>
+        <section>
+          <pre pre>
+            <div class="skiptranslate">
             This is a test
             </div>
           </pre>
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
-          Simple "code" test
-        </h3>
+        <pre comment class="notranslate">
+            <h3>Content & Inline Title inside a notranslate-div?</h3>
+            Title werden trotzdem übersetzt ¯\_(ツ)_/¯
+          </pre>
+        <section>
+          <pre pre>
+            <div class="notranslate" title="This is a Test">
+              <p title="Is this a test?">Yes this is a test</p>
+            </div>
+          </pre>
+          <pre pos></pre>
+        </section>
+      </div>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+            <h3>Give a split to your texter!</h3>
+            Text wird aufgesplitted D:
+          </pre>
+        <section>
+          <pre pre>
+            <div>
+            Toilet paper attack claws fluff everywhere meow miao french ciao litterbox hate dog trip on catnip
+            Meow proudly present butt to human so scream at teh bath.
+            Then cats take over the world kitty pounce, trip, faceplant you didn't see that no you didn't definitely didn't lick, lick, lick, and preen away the embarrassment ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss and run in circles, but stand in doorway, unwilling to chose whether to stay in or go out.
+            Cat not kitten around step on your keyboard while you're gaming and then turn in a circle .
+            Shake treat bag i’m so hungry i’m so hungry but ew not for that so pet my belly, you know you want to; seize the hand and shred it! but poop in the plant pot pounce on unsuspecting person.
+            Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff kitty run to human with blood on mouth from frenzied attack on poor innocent mouse, don't i look cute? but eat plants, meow, and throw up because i ate plants for stare at the wall, play with food and get confused by dust for cat ass trophy meow in empty rooms.
+            Stare at imaginary bug chase ball of string.
+            Steal the warm chair right after you get up i hate cucumber pls dont throw it at me.
+            Attack feet howl on top of tall thing for eat a plant, kill a hand, eat grass, throw it back up. Who's the baby.
+            </div>
+          </pre>
+          <pre pos></pre>
+        </section>
+      </div>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+            <h3>Simple "code" test</h3>
+            Der dupliziert doch dreist das Element...
+          </pre>
         <section>
           <pre pre>
             <code>
@@ -128,25 +261,34 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
-      <div class="container skiptranslate">
-        <h3 class="skiptranslate">
-          Simple "code" test (skiptranslate)
-        </h3>
+      <!---->
+      <hr />
+      <br />
+      <!---->
+      <div class="container">
+        <pre comment class="notranslate">
+          <h3>Simple "code" test (skiptranslate)</h3>
+          Auch hier wirds dupliziert D:
+        </pre>
         <section>
           <pre pre>
-            <code>
-              Cookie
-            </code>
+            <div class="skiptranslate">
+              <code>
+                Cookie
+              </code>
+             </div>
           </pre>
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
-          Simple "marquee" test
-        </h3>
+        <pre comment class="notranslate">
+          <h3>Simple "marquee" test</h3>
+        </pre>
         <section>
           <pre pre>
             <marquee>Test</marquee>
@@ -154,11 +296,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3>
           Simple "custom html" test
-        </h3>
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <t-video>Cookie</t-video>
@@ -166,11 +313,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3>
           Simple "span" test
-        </h3>
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <span>
@@ -180,11 +332,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
-          Simple Link test
-        </h3>
+        <pre comment class="notranslate">
+          <h3>
+           Simple Link test
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <a href="//example.com">
@@ -194,11 +351,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
-          Simple link in div
-        </h3>
+        <pre comment class="notranslate">
+          <h3>
+           Simple link in div
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <div>
@@ -210,11 +372,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3>
           testlink
-        </h3>
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <a class="panel1 cur" href="#"
@@ -227,11 +394,17 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container notranslate">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3 class="notranslate">
           testlink (notranslate)
-        </h3>
+          </h3>
+                    Hier sehen wir, wie die href modifiziert wird
+        </pre>
         <section>
           <pre pre>
             <div class="notranslate">
@@ -246,11 +419,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3 class="notranslate">
           testlink (notranslate in a)
-        </h3>
+          </h3>
+        </pre>
         <section>
           <pre pre>
             <a class="panel1 cur notranslate" href="#"
@@ -263,11 +441,16 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
+        <pre comment class="notranslate">
+          <h3 class="notranslate">
           testlink (article)
-        </h3>
+          </h3>
+        </pre>
         <section>
           <pre pre>
              <li>
@@ -284,23 +467,28 @@
           <pre pos></pre>
         </section>
       </div>
-      <!---------------------------------->
+      <!---->
+      <hr />
+      <br />
+      <!---->
       <div class="container">
-        <h3 class="notranslate">
-          testlink (article)
-        </h3>
+        <pre comment class="notranslate">
+          <h3 class="notranslate">
+          testhtml
+          </h3>
+        </pre>
         <section>
           <pre pre>
- <div class="element aktuelles noindex" data-ctrl-geaktuelles="{}">
-	<h3 class="element zwischenueberschrift"><span>Aktuelles</span></h3>
+ <div class="x y z" data-ctrl-x="{}">
+	<h3 class="element"><span>Aktuelles</span></h3>
 
 				<ul>
 		
 			<li>
-				<a href="/de/_meta/aktuelles/artikel/40973-doch-noch-restarbeiten-auf-der-horster-strasse" title="Diesen Artikel aufrufen">
+				<a href="" title="Artikel aufrufen">
 					<div>
-						<p>10.12.2019</p>
-						<h4>Doch noch Restarbeiten auf der Horster Straße: </h4>
+						<p>xx.xx.2019</p>
+						<h4>Eine Überschrift</h4>
 						<p> ...</p>
 					</div>
 					<span></span>
@@ -308,130 +496,21 @@
 			</li>
 		
 			<li>
-				<a href="/de/_meta/aktuelles/artikel/40972-hans-sachs-haus-nominiert-als-schoenstes-rathaus" title="Diesen Artikel aufrufen">
+				<a href="" title="Artikel aufrufen">
 					<div>
-						<p>10.12.2019</p>
-						<h4>Hans-Sachs-Haus nominiert als „schönstes Rathaus“: </h4>
+						<p>xx.xx.2019</p>
+						<h4>Eine weitere Überschrift</h4>
 						<p> ...</p>
 					</div>
 					<span></span>
 				</a>
 			</li>
 		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40963-gewerbeabteilung-ist-am-12-dezember-geschlossen" title="Diesen Artikel aufrufen">
-					<div>
-						<p>09.12.2019</p>
-						<h4>Gewerbeabteilung ist am 12. Dezember geschlossen: </h4>
-						<p> ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40962-kurt-schumacher-strasse-in-fahrtrichtung-gelsenkirchen-einspurig" title="Diesen Artikel aufrufen">
-					<div>
-						<p>09.12.2019</p>
-						<h4>Kurt-Schumacher-Straße in Fahrtrichtung [...]</h4>
-						<p style="display: none;">Fahrbahnübergänge der Brücke über die Autobahn 2 werden erneuert</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40961-umbau-der-horster-strasse-ist-nahezu-abgeschlossen" title="Diesen Artikel aufrufen">
-					<div>
-						<p>09.12.2019</p>
-						<h4>Umbau der Horster Straße ist nahezu abgeschlossen: </h4>
-						<p> ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40944-intensivtaeter-wird-erneut-abgeschoben" title="Diesen Artikel aufrufen">
-					<div>
-						<p>06.12.2019</p>
-						<h4>Intensivtäter wird erneut abgeschoben: </h4>
-						<p>Nach Hinweis ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40943-100-balus-foerdern-grundschulkinder-mit-gemuetlichkeit-mit-ruhe-und-gemuetlichkeit" title="Diesen Artikel aufrufen">
-					<div>
-						<p>06.12.2019</p>
-						<h4>100 Balus fördern Grundschulkinder „mit [...]</h4>
-						<p style="display: none;">Gelsenkirchen ist Spitzenreiter!</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40937-verbesserungen-in-der-zulassungsstelle" title="Diesen Artikel aufrufen">
-					<div>
-						<p>06.12.2019</p>
-						<h4>Verbesserungen in der Zulassungsstelle: </h4>
-						<p>Servicepaket ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40932-12-dezember-abteilung-gewerbe-geschlossen" title="Diesen Artikel aufrufen">
-					<div>
-						<p>05.12.2019</p>
-						<h4>12. Dezember: Abteilung Gewerbe geschlossen: </h4>
-						<p>Referat ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40928-staedtische-kitas-erhalten-sunpass-zertifikat" title="Diesen Artikel aufrufen">
-					<div>
-						<p>05.12.2019</p>
-						<h4>Städtische Kitas erhalten „SunPass-Zertifikat“: </h4>
-						<p> ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40927-altersgerecht-und-barrierearm-umbauen" title="Diesen Artikel aufrufen">
-					<div>
-						<p>05.12.2019</p>
-						<h4>Altersgerecht und barrierearm umbauen: </h4>
-						<p> ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
-		
-			<li>
-				<a href="/de/_meta/aktuelles/artikel/40926-erstmals-rueckbaugebot-erlassen" title="Diesen Artikel aufrufen">
-					<div>
-						<p>05.12.2019</p>
-						<h4>Erstmals Rückbaugebot erlassen: </h4>
-						<p>Stadt ordnet den ...</p>
-					</div>
-					<span></span>
-				</a>
-			</li>
 		
 			</ul>
 		
-	<div class="bttnzeile">
-		<a href="/de/_meta/aktuelles/artikel/bereich/13-" class="bttn">Alle Nachrichten </a>
+	<div class="btn">
+		<a href="..." class="bttn">Alle Nachrichten </a>
 	</div>
 </div>
           </pre>

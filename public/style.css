@@ -16,9 +16,13 @@ header {
   break-before: always;
 }
 .container {
-  width: auto !important;
-  margin-top: 15px;
+  /* width: auto !important;*/
+  /*margin-top: 15px;*/
   text-align: center;
+  max-width: 100%;
+}
+hr {
+  margin-bottom: 0;
 }
 pre[comment] {
   background: #f7edba;
@@ -43,10 +47,12 @@ pre[comment] h3 {
 pre[pre] {
   background: whitesmoke;
   flex: none;
+  width: 40%;
 }
 pre[pos] {
   background: #b2dcef;
   max-width: 100%;
+  width: 60%;
 }
 
 .notranslate section {
@@ -55,4 +61,33 @@ pre[pos] {
 
 section.col {
   flex-direction: column;
+}
+
+*:not(html)::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+*:not(html)::-webkit-scrollbar-track {
+  background: #E0E0E0;
+}
+
+*:not(html)::-webkit-scrollbar-thumb {
+  background: #9E9E9E;
+}
+*:not(html)::-webkit-scrollbar-thumb:hover {
+  background: #BDBDBD;
+}
+
+/* custom diff*/
+ins {
+  text-decoration: none;
+  background-color: #0F9D58;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+del {
+  text-decoration: line-through;
+  background-color: #DB4437;
+  color: rgba(255, 255, 255, 0.8);
 }
